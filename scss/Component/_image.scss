@@ -1,0 +1,26 @@
+.image__container {
+  position: relative;
+  img {
+    position: absolute;
+    width: 70%;
+    box-shadow: 0rem 1.5rem 4rem black;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    &:hover {
+      transform: translateX(0%) scale(1.5);
+
+      //   border: 1rem solid $color-primary;
+      //   padding: 1rem;
+    }
+  }
+  [src="img/nat-2-large.jpg"] {
+    z-index: 2;
+    transform: translate(30%, 20%);
+  }
+  [src="img/nat-3-large.jpg"] {
+    z-index: 2;
+    transform: translate(-10%, 60%);
+  }
+}

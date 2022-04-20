@@ -1,0 +1,18 @@
+html {
+  font-size: 62.5%;
+}
+%universal {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+* {
+  @extend %universal;
+  &::after,
+  &::before {
+    @extend %universal;
+  }
+}
+body {
+  padding: 3rem;
+}

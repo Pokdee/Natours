@@ -10,13 +10,13 @@
     />
 
     <link rel="stylesheet" href="css/icon-font.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="scss/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <!-- <nav>
                 <ul>
                     <li></li>
@@ -26,15 +26,95 @@
                     <li></li>
                 </ul>
             </nav> -->
-      <img class="header-logo" src="./img/logo-white.png" alt="natours logo" />
-      <div class="header-heading">
-        <h1>
-          <span class="primary-heading">OUTDOORS</span>
-          <span class="sub-heading">IS WHERE LIFE HAPPENS</span>
+      <img class="header__logo" src="./img/logo-white.png" alt="natours logo" />
+      <div class="header__heading header__container">
+        <h1 class="header__heading">
+          <span class="header__heading--primary">OUTDOORS</span>
+          <span class="header__heading--sub">IS WHERE LIFE HAPPENS</span>
         </h1>
 
-        <a href="#" class="btn btn-white">DISCOVER OUR TOURS</a>
+        <a href="#" class="btn btn-white btn-animate">DISCOVER OUR TOURS</a>
       </div>
     </header>
+    <main>
+      <section class="section-about">
+        <div class="u-center-text u-margin-btm-8">
+          <h2 class="heading-secondary">
+            exciting tours for adventurous people
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <article>
+              <h3>you're going to fall in love with nature</h3>
+
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus delectus deserunt ratione quo quae iure quia dicta
+                esse exercitationem suscipit aperiam optio, saepe sapiente
+                beatae dolorum aliquam animi quidem similique?
+              </p>
+
+              <h3>live adventures like you never have been before</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus quaerat, quam, exercitationem consectetur doloribus
+                debitis nostrum distinctio iste, doloremque ut repellat?
+              </p>
+            </article>
+            <a class="link" href="#">Learn more--></a>
+          </div>
+          <div class="col-1-of-2">
+            <div class="image__container">
+              <img
+                class="hover-img"
+                src="img/nat-1-large.jpg"
+                alt="forest Image"
+              />
+              <img
+                class="hover-img"
+                src="img/nat-2-large.jpg"
+                alt="landscape Image"
+              />
+              <img
+                class="hover-img"
+                src="img/nat-3-large.jpg"
+                alt="mountains Image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <section class="grid-test">
+      <div class="row">
+        <div class="col-1-of-2">This is Col 1 of 2</div>
+        <div class="col-1-of-2">This is Col 1 of 2</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-3">This is col 1 of 3</div>
+        <div class="col-1-of-3">This is col 1 of 3</div>
+        <div class="col-1-of-3">This is col 1 of 3</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-3">This is col 1 of 3</div>
+        <div class="col-2-of-3">This is col 2 of 3</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-4">This is col 1 of 4</div>
+        <div class="col-1-of-4">This is col 1 of 4</div>
+        <div class="col-1-of-4">This is col 1 of 4</div>
+        <div class="col-1-of-4">This is col 1 of 4</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-4">This is col 1 of 4</div>
+        <div class="col-1-of-4">This is col 1 of 4</div>
+        <div class="col-2-of-4">This is col 2 of 4</div>
+      </div>
+      <div class="row">
+        <div class="col-1-of-4">This is col 1 of 4</div>
+        <div class="col-3-of-4">This is col 3 of 4</div>
+      </div>
+    </section> -->
   </body>
 </html>
