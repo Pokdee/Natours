@@ -1,0 +1,21 @@
+.section-feature {
+  .feature {
+    text-align: center;
+    [class^="icon-basic"] {
+      display: inline-block;
+      font-size: 7rem;
+      color: $color-primary;
+    }
+    &-caption {
+      font-size: 1.4rem;
+      &__heading {
+        text-transform: uppercase;
+        color: #818281;
+      }
+      &__para {
+        line-height: 2.5rem;
+        color: #818281;
+      }
+    }
+  }
+}

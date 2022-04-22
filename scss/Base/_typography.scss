@@ -1,14 +1,15 @@
 body {
   font-family: "lato", sans-serif;
 }
+
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-image: linear-gradient(
     to right,
     $color-primary-light,
-    $color-primary-drak
+    $color-primary-dark
   );
   -webkit-background-clip: text;
   color: transparent;
@@ -21,19 +22,14 @@ body {
 article {
   color: gray;
   line-height: 3rem;
-  h3 {
+  .heading-tertiary {
     text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: $default-font-size;
+    font-weight: 800;
     margin-bottom: 2rem;
   }
-  p {
-    font-size: 1.8rem;
+  .paragraph {
+    font-size: $default-font-size;
     margin-bottom: 2rem;
   }
-}
-.link {
-  font-size: 2rem;
-  color: $color-primary;
-  text-underline-offset: 1rem;
 }

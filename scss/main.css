@@ -2,8 +2,40 @@
   text-align: center;
 }
 
-.u-margin-btm-8 {
+.u-margin-btm-big {
   margin-bottom: 8rem;
+}
+
+.u-margin-btm-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-btm-small {
+  margin-bottom: 1.5rem;
+}
+
+.section-feature .feature {
+  text-align: center;
+}
+
+.section-feature .feature [class^="icon-basic"] {
+  display: inline-block;
+  font-size: 7rem;
+  color: #55c57a;
+}
+
+.section-feature .feature-caption {
+  font-size: 1.4rem;
+}
+
+.section-feature .feature-caption__heading {
+  text-transform: uppercase;
+  color: #818281;
+}
+
+.section-feature .feature-caption__para {
+  line-height: 2.5rem;
+  color: #818281;
 }
 
 @-webkit-keyframes moveInRight {
@@ -124,7 +156,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
@@ -146,22 +178,16 @@ article {
   line-height: 3rem;
 }
 
-article h3 {
+article .heading-tertiary {
   text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 800;
   margin-bottom: 2rem;
 }
 
-article p {
-  font-size: 1.8rem;
+article .paragraph {
+  font-size: 1.6rem;
   margin-bottom: 2rem;
-}
-
-.link {
-  font-size: 2rem;
-  color: #55c57a;
-  text-underline-offset: 1rem;
 }
 
 .header {
@@ -200,15 +226,15 @@ article p {
 }
 
 .header__heading--primary {
-  font-size: 6rem;
-  letter-spacing: 3rem;
+  font-size: 8rem;
+  letter-spacing: 5rem;
   -webkit-animation: moveInLeft 1s ease-out;
           animation: moveInLeft 1s ease-out;
 }
 
 .header__heading--sub {
   font-size: 2rem;
-  letter-spacing: 1.5rem;
+  letter-spacing: 2.8rem;
   margin-bottom: 5rem;
   -webkit-animation: moveInRight 1s ease-out 0.55s backwards;
           animation: moveInRight 1s ease-out 0.55s backwards;
@@ -216,8 +242,9 @@ article p {
 }
 
 .btn:link, .btn:visited {
+  font-size: 1.6rem;
   text-decoration: none;
-  padding: 2rem;
+  padding: 2rem 4rem;
   border-radius: 100px;
   color: #736e6e;
   display: inline-block;
@@ -268,6 +295,34 @@ article p {
           animation: moveUp 1s ease-out 0.7s backwards;
 }
 
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #55c57a;
+  text-decoration: none;
+  border-bottom: 2px solid #55c57a;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.btn-text:hover {
+  background-color: #28b485;
+  color: black;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 0.8rem 0.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.8rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-text:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -280,7 +335,7 @@ article p {
 }
 
 .row:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 .row [class^="col-"] {
@@ -292,71 +347,102 @@ article p {
 }
 
 .row .col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
-  margin-left: 6rem;
+  width: calc((100% - 8rem) / 2);
+  margin-left: 8rem;
 }
 
 .row .col-1-of-3 {
-  width: calc((100% - (6rem * 2)) / 3);
-  margin-left: 6rem;
+  width: calc((100% - (8rem * 2)) / 3);
+  margin-left: 8rem;
 }
 
 .row .col-2-of-3 {
-  width: calc( (calc((100% - (6rem * 2)) / 3) * 2) + 6rem);
-  margin-left: 6rem;
+  width: calc( (calc((100% - (8rem * 2)) / 3) * 2) + 8rem);
+  margin-left: 8rem;
 }
 
 .row .col-1-of-4 {
-  width: calc((100% - (6rem * 3)) / 4);
-  margin-left: 6rem;
+  width: calc((100% - (8rem * 3)) / 4);
+  margin-left: 8rem;
 }
 
 .row .col-2-of-4 {
-  width: calc( (calc((100% - (6rem * 3)) / 4) * 2) + 6rem);
-  margin-left: 6rem;
+  width: calc( (calc((100% - (8rem * 3)) / 4) * 2) + 8rem);
+  margin-left: 8rem;
 }
 
 .row .col-3-of-4 {
-  width: calc( (calc((100% - (6rem * 3)) / 4) * 3) + (6rem* 2));
-  margin-left: 6rem;
+  width: calc( (calc((100% - (8rem * 3)) / 4) * 3) + (8rem* 2));
+  margin-left: 8rem;
 }
 
 .section-about {
   margin-top: -20vh;
-  padding: 25rem;
+  padding: 25rem 0;
   background-color: #f7f7f7;
 }
 
-.image__container {
+.section-feature {
+  margin-top: -9rem;
+  padding: 25rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.733)), to(rgba(85, 197, 122, 0.749))), url(../../img/nat-4.jpg);
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.733), rgba(85, 197, 122, 0.749)), url(../../img/nat-4.jpg);
+  background-size: cover;
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+}
+
+.section-feature .feature {
+  background-color: rgba(247, 247, 247, 0.8);
+  padding: 2.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.section-feature .feature:hover {
+  -webkit-transform: translateY(-2rem) scale(1.05);
+          transform: translateY(-2rem) scale(1.05);
+}
+
+.section-feature > * {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+
+.component {
   position: relative;
 }
 
-.image__container img {
+.component__img {
   position: absolute;
-  width: 70%;
-  -webkit-box-shadow: 0rem 1.5rem 4rem black;
-          box-shadow: 0rem 1.5rem 4rem black;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
+  width: 60%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.image__container img:hover {
-  -webkit-transform: translateX(0%) scale(1.5);
-          transform: translateX(0%) scale(1.5);
+.component__img--p2 {
+  top: 5rem;
+  left: 45%;
 }
 
-.image__container [src="img/nat-2-large.jpg"] {
-  z-index: 2;
-  -webkit-transform: translate(30%, 20%);
-          transform: translate(30%, 20%);
+.component__img--p3 {
+  top: 18rem;
+  left: 15%;
 }
 
-.image__container [src="img/nat-3-large.jpg"] {
-  z-index: 2;
-  -webkit-transform: translate(-10%, 60%);
-          transform: translate(-10%, 60%);
+.component__img:hover {
+  outline: 1.5rem solid #55c57a;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  -webkit-transform: translateY(-20px) scale(1.2);
+          transform: translateY(-20px) scale(1.2);
+  z-index: 5;
+}
+
+.component:hover .component__img:not(:hover) {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 /*# sourceMappingURL=main.css.map */

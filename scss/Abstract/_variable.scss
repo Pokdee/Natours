@@ -1,11 +1,16 @@
 ///colors
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
-$color-primary-drak: #28b485;
+$color-primary-dark: #28b485;
+
 $color-btn: #736e6e;
 $color-dark-gray-1: #f7f7f7;
+$color-gray-dark: #777;
 
 //variables
 $row-width: 114rem;
-$grid-col-gap: 6rem;
-$grid-row-gap: 3rem;
+$grid-col-gap: 8rem;
+$grid-row-gap: 6rem;
+
+//Fonts
+$default-font-size: 1.6rem;
