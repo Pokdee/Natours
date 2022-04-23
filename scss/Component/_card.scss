@@ -1,0 +1,174 @@
+.tours {
+  perspective: 150rem;
+
+  &-card__container {
+    width: 100%;
+  }
+  ///Before Rotation
+
+  &-card__back {
+    transform: rotateY(-180deg);
+    transition: all 0.5s $trans-dalay;
+  }
+
+  ///btn before rotate
+  &-card__btn {
+    opacity: 0;
+  }
+
+  ///Rotation Transition
+  &:hover &-card {
+    transform: rotateY(-180deg);
+    &__btn {
+      opacity: 100;
+    }
+
+    &__back {
+      transform: rotate(180);
+      opacity: 100;
+    }
+  }
+
+  //card style by its number
+  &-card-1 {
+    &__header {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-card-1, 0.4),
+          rgba($color-card-1, 0.4)
+        ),
+        url(../../img/nat-5.jpg);
+    }
+    &__back {
+      background-color: $color-card-1;
+    }
+  }
+  &-card-2 {
+    &__header {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-card-2, 0.4),
+          rgba($color-card-2, 0.4)
+        ),
+        url(../../img/nat-6.jpg);
+    }
+    &__back {
+      background-color: $color-card-2;
+    }
+  }
+  &-card-3 {
+    &__header {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-card-3, 0.4),
+          rgba($color-card-3, 0.4)
+        ),
+        url(../../img/nat-6.jpg);
+    }
+    &__back {
+      background-color: $color-card-3;
+    }
+  }
+
+  //card-front style
+  &-card {
+    width: 100%;
+    transition: all 1s;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+    &__header {
+      background-size: cover;
+      background-position: top;
+      padding: 10rem 6rem;
+      position: relative;
+    }
+    &__heading {
+      display: inline-block;
+
+      color: white;
+      text-transform: uppercase;
+      font-weight: 300;
+      padding: 1rem;
+
+      &--first {
+        position: absolute;
+        bottom: 29%;
+        right: 16%;
+        // outline: 1px solid darken($color-card-1, 10%);
+
+        font-size: 3.5rem;
+        margin-right: -3.5rem;
+        // background-color: $color-card-1;
+      }
+      &--sec {
+        // outline: 1px solid darken($color-card-1, 10%);
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        font-size: 3.5rem;
+        // background-color: $color-card-1;
+      }
+    }
+    &__text-container {
+      padding: 1rem 0;
+    }
+    &__text {
+      width: 60%;
+      margin: auto;
+      &:not(:last-child) {
+        padding-bottom: 1.3rem;
+        border-bottom: 2px solid rgba(199, 194, 194, 0.724);
+      }
+    }
+
+    ///card back style
+    &__back {
+      padding: 12.8rem 0;
+      .text,
+      .price {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 300;
+      }
+      .price {
+        font-size: 5rem;
+      }
+    }
+  }
+  ///card-POstion by it number
+  &-card-1 {
+    &__front {
+      position: relative;
+    }
+    &__back {
+      position: absolute;
+      width: 100%;
+      top: 0%;
+      opacity: 0;
+    }
+  }
+  &-card-2 {
+    &__front {
+      position: relative;
+    }
+    &__back {
+      position: absolute;
+      width: 100%;
+      top: 0%;
+      opacity: 0;
+    }
+  }
+  &-card-3 {
+    &__front {
+      position: relative;
+    }
+    &__back {
+      position: absolute;
+      width: 100%;
+      top: 0%;
+      opacity: 0;
+    }
+  }
+}
