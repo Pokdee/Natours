@@ -1,174 +1,140 @@
-.tours {
+.card {
   perspective: 150rem;
+  position: relative;
+  height: 50rem;
 
-  &-card__container {
+  //During Hover
+  &:hover &_side {
+    transform: rotateY(-180deg);
+    &--back {
+      transform: rotateY(0);
+    }
+  }
+
+  ///Before Hover
+  &_side {
     width: 100%;
-  }
-  ///Before Rotation
+    height: 100%;
+    position: absolute;
+    transition: all 1s;
+    backface-visibility: hidden;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.469);
 
-  &-card__back {
-    transform: rotateY(-180deg);
-    transition: all 0.5s $trans-dalay;
-  }
-
-  ///btn before rotate
-  &-card__btn {
-    opacity: 0;
-  }
-
-  ///Rotation Transition
-  &:hover &-card {
-    transform: rotateY(-180deg);
-    &__btn {
-      opacity: 100;
+    &--front {
+      background-color: white;
     }
+    &--back {
+      width: 100%;
+      transform: rotateY(180deg);
+      ///Card Bg color by its number
+      &--1 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-card-1,
+          $color-card-1-sec
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary,
+          $color-primary-light
+        );
+      }
+      &--3 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-card-3,
+          $color-card-3-sec
+        );
+      }
 
-    &__back {
-      transform: rotate(180);
-      opacity: 100;
+      .tour-price {
+        color: $color-white;
+        &__view {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .price__tag {
+          text-transform: uppercase;
+          font-size: 2rem;
+          font-weight: 300;
+        }
+        .price {
+          margin-bottom: 12rem;
+          font-size: 6rem;
+          font-weight: 300;
+        }
+        .btn-book {
+          padding: 1.5rem 3rem;
+        }
+      }
     }
   }
+  ///Picture and color Front-Card
+  &__picture {
+    padding: 12rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-  //card style by its number
-  &-card-1 {
-    &__header {
-      background-image: linear-gradient(
-          to right,
-          rgba($color-card-1, 0.4),
-          rgba($color-card-1, 0.4)
-        ),
+    //Card Front Image by it number
+    &--1 {
+      background-image: radial-gradient($color-card-1, $color-card-1-sec),
         url(../../img/nat-5.jpg);
     }
-    &__back {
+    &--2 {
+      background-image: linear-gradient($color-primary, $color-primary-light),
+        url(../../img/nat-6.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient($color-card-3, $color-card-3-sec),
+        url(../../img/nat-7.jpg);
+    }
+  }
+  ////Font-style front Card
+  &__heading {
+    position: absolute;
+    top: 14.5rem;
+    right: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3rem;
+    width: 65%;
+    text-align: right;
+    padding: 1rem 0.5rem;
+  }
+  &__heading-span {
+    color: $color-white;
+    padding: 0.5rem;
+    box-decoration-break: slice;
+
+    &--1 {
       background-color: $color-card-1;
     }
-  }
-  &-card-2 {
-    &__header {
-      background-image: linear-gradient(
-          to right,
-          rgba($color-card-2, 0.4),
-          rgba($color-card-2, 0.4)
-        ),
-        url(../../img/nat-6.jpg);
+    &--2 {
+      background-color: $color-primary;
     }
-    &__back {
-      background-color: $color-card-2;
-    }
-  }
-  &-card-3 {
-    &__header {
-      background-image: linear-gradient(
-          to right,
-          rgba($color-card-3, 0.4),
-          rgba($color-card-3, 0.4)
-        ),
-        url(../../img/nat-6.jpg);
-    }
-    &__back {
+    &--3 {
       background-color: $color-card-3;
     }
   }
+  &__details {
+    width: 50%;
+    margin: 2rem auto;
 
-  //card-front style
-  &-card {
-    width: 100%;
-    transition: all 1s;
-    background-color: white;
-    text-align: center;
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
-    &__header {
-      background-size: cover;
-      background-position: top;
-      padding: 10rem 6rem;
-      position: relative;
-    }
-    &__heading {
-      display: inline-block;
-
-      color: white;
-      text-transform: uppercase;
-      font-weight: 300;
-      padding: 1rem;
-
-      &--first {
-        position: absolute;
-        bottom: 29%;
-        right: 16%;
-        // outline: 1px solid darken($color-card-1, 10%);
-
-        font-size: 3.5rem;
-        margin-right: -3.5rem;
-        // background-color: $color-card-1;
+    ul {
+      list-style: none;
+      font-size: 1.6rem;
+      li {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        &:not(:last-child) {
+          border-bottom: 2px solid #eee;
+        }
       }
-      &--sec {
-        // outline: 1px solid darken($color-card-1, 10%);
-        position: absolute;
-        bottom: 10%;
-        right: 5%;
-        font-size: 3.5rem;
-        // background-color: $color-card-1;
-      }
-    }
-    &__text-container {
-      padding: 1rem 0;
-    }
-    &__text {
-      width: 60%;
-      margin: auto;
-      &:not(:last-child) {
-        padding-bottom: 1.3rem;
-        border-bottom: 2px solid rgba(199, 194, 194, 0.724);
-      }
-    }
-
-    ///card back style
-    &__back {
-      padding: 12.8rem 0;
-      .text,
-      .price {
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        color: white;
-        font-weight: 300;
-      }
-      .price {
-        font-size: 5rem;
-      }
-    }
-  }
-  ///card-POstion by it number
-  &-card-1 {
-    &__front {
-      position: relative;
-    }
-    &__back {
-      position: absolute;
-      width: 100%;
-      top: 0%;
-      opacity: 0;
-    }
-  }
-  &-card-2 {
-    &__front {
-      position: relative;
-    }
-    &__back {
-      position: absolute;
-      width: 100%;
-      top: 0%;
-      opacity: 0;
-    }
-  }
-  &-card-3 {
-    &__front {
-      position: relative;
-    }
-    &__back {
-      position: absolute;
-      width: 100%;
-      top: 0%;
-      opacity: 0;
     }
   }
 }
