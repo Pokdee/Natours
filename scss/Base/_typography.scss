@@ -23,16 +23,17 @@ body {
 article {
   color: gray;
   line-height: 3rem;
-  .heading-tertiary {
-    text-transform: uppercase;
-    font-size: $default-font-size;
-    font-weight: 800;
-    margin-bottom: 2rem;
-  }
+
   .paragraph {
     font-size: $default-font-size;
     margin-bottom: 2rem;
   }
+}
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: $default-font-size;
+  font-weight: 800;
+  margin-bottom: 2rem;
 }
 
 .btn {
