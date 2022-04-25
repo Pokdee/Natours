@@ -39,7 +39,10 @@
   }
   &-green {
     background-color: $color-primary;
+    position: relative;
+    font-size: 1.5rem;
     &::after {
+      position: absolute;
       background-color: $color-primary;
     }
   }
