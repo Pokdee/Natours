@@ -49,3 +49,12 @@
   font-size: $default-font-size;
   position: relative;
 }
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  font-size: $default-font-size;
+}
