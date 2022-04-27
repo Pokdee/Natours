@@ -316,71 +316,75 @@
           <a class="btn-text" href="#">Read all stories &rArr;</a>
         </div>
       </section>
-      <div class="section-booking">
+      <section class="section-book">
         <div class="row">
-          <div class="booking">
-            <form action="#" class="booking__form">
-              <div class="u-center-text u-margin-btm-big">
-                <h1 class="heading-secondary u-margin-btm-small">
-                  Start booking now
-                </h1>
-              </div>
-
-              <div class="booking__form_gp-1">
-                <input
-                  class="booking__form_input booking__form_input--1 name u-margin-btm-medium"
-                  id="name"
-                  type="text"
-                  placeholder="Fullname"
-                />
-                <label
-                  class="booking__form__label booking__form__label--1"
-                  for="name"
-                  >fullname</label
-                >
-              </div>
-
-              <div class="booking__form_gp-2">
-                <input
-                  class="booking__form_input booking__form_input--2"
-                  id="mail"
-                  type="email"
-                  placeholder="Email Address"
-                />
-                <label
-                  class="booking__form__label booking__form__label--2"
-                  for="mail"
-                  >Email address</label
-                >
-              </div>
-
-              <div class="checkbox u-center-text">
-                <div class="tour-gp tour-gp--1">
-                  <input
-                    class="small"
-                    id="small"
-                    type="radio"
-                    name="tour-group"
-                  />
-                  <label class="small" for="small"> Small tour group </label>
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start booking now</h2>
                 </div>
-                <div class="tour-gp tour-gp--2">
+
+                <div class="form__group">
                   <input
-                    class="large"
-                    id="huge"
-                    type="radio"
-                    name="tour-group"
+                    type="text"
+                    class="form__input"
+                    placeholder="Full name"
+                    id="name"
+                    required
                   />
-                  <label class="large" for="huge"> Large tour group </label>
+                  <label for="name" class="form__label">Full name</label>
                 </div>
-              </div>
-              <div class="text-next u-center-text">
-                <a href="#" class="btn-text">Next Step &rArr;;</a>
-              </div>
-            </form>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Small tour group
+                    </label>
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Large tour group
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form__group u-margin-top-big">
+                  <button class="btn btn-green btn-book">
+                    Next step &rarr;
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <!-- <section class="grid-test">
       <div class="row">
