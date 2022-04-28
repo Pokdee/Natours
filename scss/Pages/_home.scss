@@ -254,3 +254,65 @@
     color: white;
   }
 }
+
+.footer {
+  background-color: black;
+  padding: 8rem 0;
+  // position: relative;
+  color: $color-gray-light;
+  font-size: $default-font-size;
+
+  &__logo {
+    margin-bottom: 8rem;
+    &-img {
+      display: block;
+      margin: auto;
+    }
+    // position: absolute;
+    // left: 50%;
+    // top: 30%;
+    // transform: translate(-50%, -50%);
+  }
+  &__nav {
+    text-transform: uppercase;
+    width: 90%;
+    margin-left: 10%;
+  }
+  &__ul {
+    display: block;
+    list-style: none;
+    border-top: 1px solid white; // background-color: yellowgreen;
+
+    padding-top: 2rem;
+    @include clearfix;
+  }
+  &__li {
+    float: left;
+
+    &:not(:first-child) {
+      margin-left: 1.8rem;
+    }
+  }
+  &__a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+
+    transition: all 0.5s;
+
+    &:hover {
+      color: $color-primary;
+      transform: rotate(10deg) translateY(-1rem);
+      padding: 1rem;
+      background-color: black;
+    }
+  }
+  &__copyright {
+    width: 80%;
+    font-size: $default-font-size;
+    line-height: 3rem;
+    border-top: 1px solid white;
+    padding-top: 2rem;
+  }
+}

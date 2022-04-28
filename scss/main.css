@@ -949,4 +949,72 @@ article .paragraph {
 .form .btn-book {
   color: white;
 }
+
+.footer {
+  background-color: black;
+  padding: 8rem 0;
+  color: #f7f7f7;
+  font-size: 1.6rem;
+}
+
+.footer__logo {
+  margin-bottom: 8rem;
+}
+
+.footer__logo-img {
+  display: block;
+  margin: auto;
+}
+
+.footer__nav {
+  text-transform: uppercase;
+  width: 90%;
+  margin-left: 10%;
+}
+
+.footer__ul {
+  display: block;
+  list-style: none;
+  border-top: 1px solid white;
+  padding-top: 2rem;
+}
+
+.footer__ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer__li {
+  float: left;
+}
+
+.footer__li:not(:first-child) {
+  margin-left: 1.8rem;
+}
+
+.footer__a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer__a:hover {
+  color: #55c57a;
+  -webkit-transform: rotate(10deg) translateY(-1rem);
+          transform: rotate(10deg) translateY(-1rem);
+  padding: 1rem;
+  background-color: black;
+}
+
+.footer__copyright {
+  width: 80%;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  border-top: 1px solid white;
+  padding-top: 2rem;
+}
 /*# sourceMappingURL=main.css.map */
