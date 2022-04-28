@@ -951,7 +951,7 @@ article .paragraph {
 }
 
 .footer {
-  background-color: black;
+  background-color: #333333;
   padding: 8rem 0;
   color: #f7f7f7;
   font-size: 1.6rem;
@@ -998,16 +998,16 @@ article .paragraph {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .footer__a:hover {
   color: #55c57a;
-  -webkit-transform: rotate(10deg) translateY(-1rem);
-          transform: rotate(10deg) translateY(-1rem);
-  padding: 1rem;
-  background-color: black;
+  -webkit-box-shadow: 0 1rem 2rem black;
+          box-shadow: 0 1rem 2rem black;
+  -webkit-transform: rotate(5deg) scale(1.3);
+          transform: rotate(5deg) scale(1.3);
 }
 
 .footer__copyright {
