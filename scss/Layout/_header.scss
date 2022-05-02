@@ -1,5 +1,6 @@
 .header {
   height: 95vh;
+  width: 100%;
   background-image: linear-gradient(
       to bottom right,
       rgba($color-primary-light, 0.733),
@@ -10,12 +11,25 @@
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-
+  @include respond(tab-land) {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+  }
   &__logo {
     height: 4rem;
     position: absolute;
     left: 4rem;
     top: 4rem;
+    @include respond(tab-port) {
+      height: 3rem;
+      left: 3rem;
+      top: 3rem;
+    }
   }
   &__container {
     text-align: center;
@@ -25,25 +39,5 @@
     transform: translate(-50%, -50%);
     width: 100%;
     color: $color-white;
-  }
-  &__heading {
-    &--primary,
-    &--sub {
-      display: block;
-      margin-bottom: 20px;
-      font-weight: 400;
-    }
-    &--primary {
-      font-size: 8rem;
-      letter-spacing: 5rem;
-      animation: moveInLeft 1s ease-out;
-    }
-    &--sub {
-      font-size: 2rem;
-      letter-spacing: 2.8rem;
-      margin-bottom: 5rem;
-      animation: moveInRight 1s ease-out 0.55s backwards;
-      font-weight: 800;
-    }
   }
 }

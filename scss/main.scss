@@ -2,13 +2,12 @@
 @import "Abstract/mixin";
 @import "Abstract/function";
 
-@import "Component/image";
+@import "Component/about";
 @import "Component/card";
 @import "Component/button";
 @import "Component/feature-box";
 @import "Component/stories";
 @import "Component/video";
-@import "Component/footer";
 @import "Component/nav";
 @import "Component/popup";
 
@@ -19,4 +18,6 @@
 
 @import "Layout/header";
 @import "Layout/grid";
+@import "Layout/footer";
+
 @import "Pages/home";

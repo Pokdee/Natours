@@ -10,10 +10,21 @@
   &:not(:last-child) {
     margin-bottom: $grid-row-gap;
   }
+
   [class^="col-"] {
     float: left;
+
+    @include respond(tab-port) {
+      float: none;
+    }
+
     &:first-child {
       margin-left: 0%;
+      @include respond(tab-port) {
+        float: none;
+        margin: auto;
+        margin-bottom: $grid-row-gap;
+      }
     }
   }
   .col-1-of-2 {
@@ -23,6 +34,13 @@
   .col-1-of-3 {
     width: calc((100% - (#{$grid-col-gap} * 2)) / 3);
     margin-left: $grid-col-gap;
+    @include respond(tab-port) {
+      width: 50% !important;
+      height: 65vh;
+    }
+    @include respond(phone) {
+      width: 70% !important;
+    }
   }
   .col-2-of-3 {
     width: calc(
@@ -33,6 +51,9 @@
   .col-1-of-4 {
     width: calc((100% - (#{$grid-col-gap} * 3)) / 4);
     margin-left: $grid-col-gap;
+    @include respond(tab-port) {
+      width: 50% !important;
+    }
   }
   .col-2-of-4 {
     width: calc(
@@ -45,5 +66,16 @@
       (calc((100% - (#{$grid-col-gap} * 3)) / 4) * 3) + (#{$grid-col-gap}* 2)
     );
     margin-left: $grid-col-gap;
+  }
+  [class^="col-"] {
+    @include respond(tab-port) {
+      float: none;
+      margin: auto;
+      margin-bottom: $grid-row-gap;
+      width: 100%;
+    }
+    @include respond(tab-port) {
+      margin-bottom: $grid-row-gap;
+    }
   }
 }

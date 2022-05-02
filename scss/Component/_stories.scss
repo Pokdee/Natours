@@ -7,6 +7,12 @@
 
   & > * {
     transform: skewX(17deg);
+    @include respond(phone) {
+      transform: skewX(0deg);
+    }
+  }
+  @include respond(phone) {
+    transform: skewX(0deg);
   }
   &__shape {
     width: 15rem;
@@ -17,6 +23,13 @@
     clip-path: circle(48% at 50% 50%);
     position: relative;
     overflow: hidden;
+
+    @include respond(phone) {
+      width: 10rem;
+      height: 10rem;
+      margin: auto;
+      margin-right: 2rem;
+    }
   }
   &__img {
     width: 100%;
@@ -39,6 +52,9 @@
   }
   &__text {
     line-height: 3rem;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
   &:hover &__img {
     filter: blur(1px) contrast(90%);

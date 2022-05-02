@@ -2,13 +2,18 @@
   &,
   &:link,
   &:visited {
-    font-size: $default-font-size;
     text-decoration: none;
     padding: 2rem 4rem;
     border-radius: 100px;
     color: $color-btn;
     display: inline-block;
     z-index: 2;
+    @include respond(tab-port) {
+      padding: 2rem 3rem;
+    }
+    @include respond(phone) {
+      padding: 1rem 2rem;
+    }
   }
   &::after {
     content: "";
@@ -65,7 +70,14 @@
     padding-bottom: 0.5rem;
     font-weight: 600;
     transition: all 0.1s;
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 1.3rem;
+    }
   }
+
   &:hover {
     background-color: $color-primary-dark;
     color: black;
