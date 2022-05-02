@@ -5,7 +5,7 @@
   @include respond(tab-port) {
     margin-top: -10vh;
 
-    padding: 15rem 0 12rem 0;
+    padding: 20rem 0 12rem 0;
   }
 
   @include respond(phone) {
@@ -100,89 +100,24 @@
     url(../../img/nat-10.jpg);
   background-position: top;
   background-size: cover;
+
+  @include respond(tab-port) {
+    width: 80%;
+    margin: auto;
+    background-image: linear-gradient(
+        102deg,
+        rgba($color-gray-light, 0.9) 100%,
+        transparent 100%
+      ),
+      url(../../img/nat-10.jpg);
+  }
+
   .form {
     width: 55%;
     height: 100%;
     padding: 5rem 0 5rem 5rem;
-
-    &__group {
-      margin-bottom: 3rem;
+    @include respond(tab-port) {
       width: 100%;
-    }
-    &__input {
-      display: block;
-      width: 80%;
-      height: 5rem;
-      margin-bottom: 1rem;
-      font-size: $default-font-size;
-      text-indent: 1rem;
-      font-family: inherit;
-      border: none;
-      border-bottom: 3px solid transparent;
-
-      &:focus {
-        outline: none;
-        border-bottom: 3px solid $color-primary;
-        &:invalid {
-          border-bottom: 3px solid $color-card-1-sec;
-        }
-      }
-    }
-
-    &__label {
-      width: 80%;
-      color: $color-gray-dark;
-      display: block;
-      padding-left: 1rem;
-    }
-    // &__input:not(:placeholder-shown) {
-    //   color: $color-primary;
-    // }
-    &__radio-group {
-      width: 50%;
-      display: inline-block;
-      &:last-child {
-        float: right;
-      }
-    }
-    &__radio-input {
-      display: none;
-    }
-    &__radio-label {
-      padding-left: 3.5rem;
-      position: relative;
-      cursor: pointer;
-
-      // &__radio-input:checked + &__radio-label &__radio-label--span::after {
-      //   opacity: 1;
-      // }
-    }
-    &__radio-button {
-      display: block;
-      width: 3rem;
-      height: 3rem;
-      border: 5px solid $color-primary;
-      border-radius: 50%;
-      position: absolute;
-      left: 10%;
-      top: 55%;
-      transform: translate(-50%, -50%);
-      &::after {
-        content: "";
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        left: 0%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border: 0.8rem solid $color-primary;
-        opacity: 0;
-      }
-    }
-    &__radio-input:checked ~ &__radio-label &__radio-button::after {
-      opacity: 1;
     }
   }
 }
@@ -239,6 +174,12 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+    @include respond(tab-port) {
+      display: block;
+      width: 100%;
+      margin-bottom: 3rem;
+      text-align: left;
+    }
   }
 
   &__radio-input {
@@ -283,6 +224,8 @@
   }
   .btn-book {
     color: white;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
   }
 }
 

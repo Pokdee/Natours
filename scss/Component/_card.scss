@@ -25,7 +25,7 @@
     height: 100%;
     position: absolute;
     transition: all 1s;
-    // backface-visibility: hidden;
+    backface-visibility: hidden;
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.469);
 
     &--front {

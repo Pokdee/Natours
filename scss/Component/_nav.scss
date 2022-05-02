@@ -9,7 +9,8 @@
     border-radius: 50%;
     transition: all 0.8s cubic-bezier(1, 0.22, 0, 1);
     background-image: radial-gradient($color-primary, $color-primary-dark);
-    @include respond(tab-port) {
+
+    @include respond(phone) {
       top: 85rem;
       right: 3rem;
     }
@@ -24,9 +25,10 @@
     z-index: 1010;
     border-radius: 50%;
     cursor: pointer;
-    @include respond(tab-port) {
+
+    @include respond(phone) {
       top: 85rem;
-      right: 3rem;
+      right: 2.8rem;
     }
     &-line {
       &::after,
@@ -46,20 +48,21 @@
         z-index: 1011;
         border-radius: 1rem;
         transition: all 0.8s;
-        @include respond(tab-port) {
+
+        @include respond(phone) {
           top: 88rem;
-          right: 4.4rem;
+          right: 4.2rem;
         }
       }
       &::after {
         top: 8.8rem;
-        @include respond(tab-port) {
+        @include respond(phone) {
           top: 87rem;
         }
       }
       &::before {
         top: 6.8rem;
-        @include respond(tab-port) {
+        @include respond(phone) {
           top: 89rem;
         }
       }
@@ -82,7 +85,7 @@
   &__checkbox:checked ~ &__buttom > &__buttom-line::before {
     transform: rotate(222deg);
     top: 7.8rem;
-    @include respond(tab-port) {
+    @include respond(phone) {
       top: 88rem;
     }
   }
@@ -90,7 +93,7 @@
   &__checkbox:checked ~ &__buttom > &__buttom-line::after {
     transform: rotate(-222deg);
     top: 7.8rem;
-    @include respond(tab-port) {
+    @include respond(phone) {
       top: 88rem;
     }
   }
@@ -131,6 +134,15 @@
       );
       background-size: 210%;
       background-position: left;
+
+      @include respond(tab-port) {
+        font-size: 5rem;
+      }
+
+      @include respond(phone) {
+        font-size: 3rem;
+      }
+
       &:hover {
         background-position: right;
         color: $color-primary-light;

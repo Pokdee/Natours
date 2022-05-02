@@ -74,8 +74,7 @@ body {
     letter-spacing: 0.1rem;
   }
   @include respond(phone) {
-    font-size: 1.7rem;
-    letter-spacing: 0.1rem;
+    font-size: 2rem;
   }
   &:hover {
     transform: skewX(20deg) skewY(3deg) scale(1.1);
