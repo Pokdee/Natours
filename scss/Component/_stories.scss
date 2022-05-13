@@ -52,6 +52,7 @@
   }
   &__text {
     line-height: 3rem;
+    color: $color-gray-dark;
     @include respond(phone) {
       font-size: 2rem;
     }

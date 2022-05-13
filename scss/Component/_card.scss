@@ -4,9 +4,10 @@
   height: 50rem;
   overflow: hidden;
   @include respond(tab-port) {
+    width: 100%;
     height: 100%;
+    margin: auto;
   }
-
   //During Hover
   &:hover &_side {
     transform: rotateY(-180deg);
@@ -15,7 +16,7 @@
       transform: rotateY(0deg);
     }
     &--back {
-      transform: rotateY(0);
+      transform: rotateY(0deg);
     }
   }
 
@@ -30,22 +31,10 @@
 
     &--front {
       background-color: white;
-      @include respond(tab-port) {
-        height: 100%;
-      }
     }
     &--back {
       width: 100%;
       transform: rotateY(180deg);
-      @include respond(tab-port) {
-        top: 60%;
-        transform: rotateY(0deg);
-        height: 55%;
-        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-      }
-      @include respond(phone) {
-        top: 72%;
-      }
 
       ///Card Bg color by its number
       &--1 {
@@ -75,14 +64,6 @@
         @include absPosition;
         height: 60%;
 
-        @include respond(tab-port) {
-          height: 10%;
-          top: 25%;
-        }
-        @include respond(phone) {
-          top: 15%;
-        }
-
         .price__tag {
           text-transform: uppercase;
           font-size: 2rem;
@@ -92,26 +73,19 @@
           font-size: 6rem;
           font-weight: 300;
           margin-bottom: 90%;
-          @include respond(tab-port) {
-            margin-bottom: 30%;
-          }
+
           @include respond(phone) {
             font-size: 3rem;
-            margin-bottom: 25%;
           }
         }
         .btn-book {
           margin-top: 0%;
           padding: 1.5rem 2rem;
           @include respond(tab-port) {
-            padding: 1.5rem 2rem;
             font-size: 1.6rem;
-            margin-top: -3rem;
           }
           @include respond(phone) {
             font-size: 1.5rem;
-            padding: 1rem 2rem;
-            margin-top: -3rem;
           }
         }
         .btn-book:active ~ .popup {
@@ -120,13 +94,76 @@
       }
     }
   }
+
+  @include respond(tab-port) {
+    &_side {
+      width: 100%;
+      backface-visibility: visible;
+      margin: auto;
+
+      &--front {
+        background-color: white;
+        height: 100%;
+        z-index: 3;
+        position: relative;
+      }
+      &--back {
+        width: 100%;
+        height: 40%;
+        z-index: 5;
+        transform: rotateY(0deg);
+        clip-path: polygon(0% 14%, 100% 0%, 100% 100%, 0% 100%);
+        position: absolute;
+        top: 60%;
+
+        .tour-price {
+          color: $color-white;
+
+          .price__tag {
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 5rem;
+            @include respond(phone) {
+              font-size: 2rem;
+              margin-bottom: 2rem;
+            }
+          }
+          .price {
+            font-size: 5.5rem;
+            font-weight: 300;
+            margin-bottom: 10rem;
+            @include respond(phone) {
+              font-size: 4rem;
+            }
+          }
+          .btn-book {
+            font-size: 2.3rem;
+            padding: 2rem 4rem;
+            @include respond(phone) {
+              font-size: 1.8rem;
+              padding: 1rem 1.5rem;
+            }
+          }
+          .btn-book:active ~ .popup {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+
   ///Picture and color Front-Card
   &__picture {
     width: 100%;
     height: 25rem;
     background-size: cover;
     background-blend-mode: screen;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
+
+    @include respond(tab-port) {
+      height: 32vh;
+    }
 
     //Card Front Image by it number
     &--1 {
@@ -153,6 +190,13 @@
     width: 65%;
     text-align: right;
     padding: 1rem 0.5rem;
+    @include respond(tab-port) {
+      top: 30rem;
+    }
+    @include respond(phone) {
+      top: 23rem;
+      right: 1rem;
+    }
   }
   &__heading-span {
     color: $color-white;
@@ -174,24 +218,35 @@
     margin: 2rem 0;
     padding: 0 5rem;
     color: $color-gray-dark;
-
     @include respond(tab-port) {
-      padding: 0 10rem;
-      // margin-top: -5rem;
+      padding: 0rem 8rem;
     }
     @include respond(phone) {
       padding: 0 5rem;
-      margin-top: 0.5rem;
     }
-
     ul {
       list-style: none;
       font-size: 1.6rem;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
       li {
         margin-bottom: 1.5rem;
         padding-bottom: 1rem;
         &:not(:last-child) {
           border-bottom: 2px solid #eee;
+        }
+        @include respond(tab-port) {
+          margin-bottom: 2.5rem;
+          padding-bottom: 1.5rem;
+        }
+        @include respond(phone) {
+          margin-bottom: 1.5rem;
+          padding-bottom: 1.5rem;
         }
       }
     }

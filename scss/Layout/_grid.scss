@@ -36,8 +36,10 @@
     margin-left: $grid-col-gap;
     @include respond(tab-port) {
       width: 50% !important;
-      height: 65vh;
+      height: 95vh;
+      margin-bottom: 5rem;
     }
+
     @include respond(phone) {
       width: 70% !important;
     }
