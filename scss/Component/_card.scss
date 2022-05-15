@@ -95,7 +95,7 @@
     }
   }
 
-  @include respond(tab-port) {
+  @media (max-width: 56.25em), (hover: none) {
     &_side {
       width: 100%;
       backface-visibility: visible;

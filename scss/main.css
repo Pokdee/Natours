@@ -247,7 +247,7 @@ article .paragraph {
           transform: scale(1);
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 56.25em), (hover: none) {
   .card_side {
     width: 100%;
     -webkit-backface-visibility: visible;
@@ -282,14 +282,14 @@ article .paragraph {
   }
 }
 
-@media (max-width: 56.25em) and (max-width: 37.5em) {
+@media (max-width: 56.25em) and (max-width: 37.5em), (hover: none) and (max-width: 37.5em) {
   .card_side--back .tour-price .price__tag {
     font-size: 2rem;
     margin-bottom: 2rem;
   }
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 56.25em), (hover: none) {
   .card_side--back .tour-price .price {
     font-size: 5.5rem;
     font-weight: 300;
@@ -297,27 +297,27 @@ article .paragraph {
   }
 }
 
-@media (max-width: 56.25em) and (max-width: 37.5em) {
+@media (max-width: 56.25em) and (max-width: 37.5em), (hover: none) and (max-width: 37.5em) {
   .card_side--back .tour-price .price {
     font-size: 4rem;
   }
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 56.25em), (hover: none) {
   .card_side--back .tour-price .btn-book {
     font-size: 2.3rem;
     padding: 2rem 4rem;
   }
 }
 
-@media (max-width: 56.25em) and (max-width: 37.5em) {
+@media (max-width: 56.25em) and (max-width: 37.5em), (hover: none) and (max-width: 37.5em) {
   .card_side--back .tour-price .btn-book {
     font-size: 1.8rem;
     padding: 1rem 1.5rem;
   }
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 56.25em), (hover: none) {
   .card_side--back .tour-price .btn-book:active ~ .popup {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -1265,6 +1265,16 @@ body {
   body {
     padding: 0%;
   }
+}
+
+::-moz-selection {
+  background-color: #55c57a;
+  color: white;
+}
+
+::selection {
+  background-color: #55c57a;
+  color: white;
 }
 
 body {
