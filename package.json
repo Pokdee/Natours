@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "concat:css": "concat   _ICONFONT/styles.css  empty.css -o style.concat.css",
-    "prefix:css": "postcss  -b 'last 5 versions' css/style.concat.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css style.css --output-style compressed",
+    "concat:css": "concat   icon-font.css  scss/main.css -o style.concat.css",
+    "prefix:css": "postcss  -b 'last 5 versions' style.concat.css -o style.prefix.css",
+    "compress:css": "node-sass style.prefix.css style.css --output-style compressed",
     "build:css": "npm-run-all  concat:css prefix:css compress:css"
   },
   "repository": {
