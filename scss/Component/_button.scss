@@ -30,12 +30,14 @@
     z-index: -1;
     transition: all 0.4s;
   }
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 5px rgba(black, 0.1);
-    &::after {
-      transform: scaleX(1.5) scaleY(1.6);
-      opacity: 0;
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 5px rgba(black, 0.1);
+      &::after {
+        transform: scaleX(1.5) scaleY(1.6);
+        opacity: 0;
+      }
     }
   }
   &:active {
@@ -81,11 +83,13 @@
     }
   }
 
-  &:hover {
-    background-color: $color-primary-dark;
-    color: black;
-    transform: translateY(-3px);
-    box-shadow: 0 0.8rem 0.5rem rgba(black, 0.1);
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-primary-dark;
+      color: black;
+      transform: translateY(-3px);
+      box-shadow: 0 0.8rem 0.5rem rgba(black, 0.1);
+    }
   }
   &:active {
     transform: translateY(-1px);

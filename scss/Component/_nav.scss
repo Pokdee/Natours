@@ -11,7 +11,7 @@
     background-image: radial-gradient($color-primary, $color-primary-dark);
 
     @include respond(phone) {
-      top: 85rem;
+      top: 75rem;
       right: 3rem;
     }
   }
@@ -27,7 +27,7 @@
     cursor: pointer;
 
     @include respond(phone) {
-      top: 85rem;
+      top: 75rem;
       right: 2.8rem;
     }
     &-line {
@@ -50,20 +50,20 @@
         transition: all 0.8s;
 
         @include respond(phone) {
-          top: 88rem;
+          top: 78rem;
           right: 4.2rem;
         }
       }
       &::after {
         top: 8.8rem;
         @include respond(phone) {
-          top: 87rem;
+          top: 77rem;
         }
       }
       &::before {
         top: 6.8rem;
         @include respond(phone) {
-          top: 89rem;
+          top: 79rem;
         }
       }
     }
@@ -86,7 +86,7 @@
     transform: rotate(222deg);
     top: 7.8rem;
     @include respond(phone) {
-      top: 88rem;
+      top: 78rem;
     }
   }
 
@@ -94,7 +94,7 @@
     transform: rotate(-222deg);
     top: 7.8rem;
     @include respond(phone) {
-      top: 88rem;
+      top: 78rem;
     }
   }
 

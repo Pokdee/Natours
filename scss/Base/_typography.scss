@@ -65,6 +65,13 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.5s;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: skewX(20deg) skewY(3deg) scale(1.1);
+      text-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.3);
+    }
+  }
   @include respond(tab-land) {
     font-size: 6rem;
     letter-spacing: 1rem;
@@ -75,10 +82,6 @@ body {
   }
   @include respond(phone) {
     font-size: 2rem;
-  }
-  &:hover {
-    transform: skewX(20deg) skewY(3deg) scale(1.1);
-    text-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.3);
   }
 }
 
