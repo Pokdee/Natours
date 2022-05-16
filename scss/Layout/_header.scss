@@ -6,7 +6,17 @@
       rgba($color-primary-light, 0.733),
       rgba($color-primary, 0.749)
     ),
-    url(../img/hero-small.jpg);
+    url(./img/hero-small.jpg);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 112.5em) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-primary-light, 0.733),
+        rgba($color-primary, 0.749)
+      ),
+      url(./img/hero.jpg);
+  }
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);

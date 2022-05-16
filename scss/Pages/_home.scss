@@ -22,7 +22,7 @@
       rgba($color-primary-light, 0.733),
       rgba($color-primary, 0.749)
     ),
-    url(../../img/nat-4.jpg);
+    url(./img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
 
@@ -70,7 +70,7 @@
 
 .section-stories {
   padding: 10rem 0rem;
-  background-color: rgba($color-gray-light, 0.9);
+  background-color: rgba($color-gray-light, 0.8);
   font-size: $default-font-size;
   position: relative;
   @include respond(phone) {

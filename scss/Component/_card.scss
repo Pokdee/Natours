@@ -168,15 +168,15 @@
     //Card Front Image by it number
     &--1 {
       background-image: radial-gradient($color-card-1, $color-card-1-sec),
-        url(../../img/nat-5.jpg);
+        url(./img/nat-5.jpg);
     }
     &--2 {
       background-image: linear-gradient($color-primary, $color-primary-light),
-        url(../../img/nat-6.jpg);
+        url(./img/nat-6.jpg);
     }
     &--3 {
       background-image: linear-gradient($color-card-3, $color-card-3-sec),
-        url(../../img/nat-7.jpg);
+        url(./img/nat-7.jpg);
     }
   }
   ////Font-style front Card
