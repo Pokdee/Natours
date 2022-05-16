@@ -1,4 +1,2 @@
-node_modules
-style.concat.css
-style.prefix.css
-scss
+node_modules 
+ scss 
